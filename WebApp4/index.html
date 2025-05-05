@@ -6,9 +6,21 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Index Page</h1>
+    <h1>Get Index Page</h1>
     <div>
-        <form action="WelcomeServlet">
+        <form action="WelcomeServlet" method="get">
+            <div style="margin-bottom: 5px;">
+                <input type="text" name="uname" placeholder="Enter Your Name:" required>
+            </div>
+            <div style="margin-bottom: 5px;">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+    <h1>Post Index Page</h1>
+    <div>
+        <form action="WelcomeServlet" method="post">
             <div style="margin-bottom: 5px;">
                 <input type="text" name="uname" placeholder="Enter Your Name:" required>
             </div>
