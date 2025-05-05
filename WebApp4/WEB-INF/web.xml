@@ -5,6 +5,6 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>WelcomeServlet</servlet-name>
-        <url-pattern>/WelcomeServlet</url-pattern>
+        <url-pattern>/DoRegister</url-pattern>
     </servlet-mapping>
 </web-app>
