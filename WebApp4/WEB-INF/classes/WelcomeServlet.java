@@ -14,12 +14,16 @@ public class WelcomeServlet extends HttpServlet{
 
         Register register=new Register(email,pwd,fullname,phone);
         RegisterDAO dao=new RegisterDAO();
-        
+        RequestDispatcher rd =req.getRequestDispatcher("login.html");
+        out.println("<h1>Start</h1>");
         if(dao.doRegister(register))
             //out.println("You Have Been Registered Successfully..");
-            res.sendRedirect("login.html");
+            //res.sendRedirect("login.html");
+            //rd.forward(req,res);
+            rd.include(req,res);
         else
             out.println("Registration Failed...");
+        out.println("<h1>End</h1>");
         out.close();
     }
     public void doGet(HttpServletRequest req,HttpServletResponse res)throws ServletException,IOException{
